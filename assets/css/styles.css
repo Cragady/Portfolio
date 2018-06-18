@@ -1,10 +1,13 @@
-/*comment/delete this vvv*/
-h1{
-    background: pink;
-}
-/*comment/delete this^^^*/
 html, body{
     height: 100%;
+}
+
+header{
+    background: pink;
+}
+
+.header-elem{
+    max-height: 50px;
 }
 
 #wrap{
