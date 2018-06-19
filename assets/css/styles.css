@@ -6,6 +6,15 @@ header{
     background: #c5c8cc;
 }
 
+p{
+    text-indent: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .header-elem{
     max-height: 50px;
     line-height: 50px;
