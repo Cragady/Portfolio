@@ -3,11 +3,16 @@ html, body{
 }
 
 header{
-    background: pink;
+    background: #c5c8cc;
 }
 
 .header-elem{
     max-height: 50px;
+    line-height: 50px;
+}
+
+.header-elem-text{
+    font-size: 1.5em;
 }
 
 #wrap{
@@ -19,6 +24,12 @@ header{
     padding-bottom: 150px;
 }
 
+.img-custom{
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 50px;
+}
+
 .footer{
     position: relative;
     margin-top: -150px;
@@ -27,4 +38,14 @@ header{
     padding-top: 20px;
     /*comment/delete visibility if making actual footer*/
     visibility: hidden;
+}
+
+@media screen and (max-width: 420px){
+    .img-custom{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
