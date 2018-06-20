@@ -11,60 +11,64 @@
 </head>
 <body>
     <div id="wrap">
+        <div id="main">
 
-        <header class="col-12 header-elem">
-            <section>
-                <div class="row">
-                    
-                    <div class="bg-info col-3 text-center header-elem">
-                        <a href="#" class="font-weight-bold header-elem-text" >Craig Wright</a>
-                    </div>
-
-                    <div class="dropdown col text-right">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Navigation Menu
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">About Me</a>
-                            <a class="dropdown-item" href="#">Portfolio</a>
-                            <a class="dropdown-item" href="#">Contact Info</a>
+            <header class="header container-fluid">
+                <section>
+                    <div class="row align-items-center">
+                        
+                        <div class="bg-info col-sm-3 col-12 text-center header-elem">
+                            <a href="#" class="font-weight-bold header-elem-text" >Craig Wright</a>
                         </div>
-                    </div>
 
+                        <div class="dropdown col-sm col-12 text-right header-elem-nav-btn">
+                            <button class="btn btn-secondary dropdown-toggle drop-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Navigation Menu
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">About Me</a>
+                                <a class="dropdown-item" href="#">Portfolio</a>
+                                <a class="dropdown-item" href="#">Contact Info</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </header>
+
+            <div>
+                <img class="rounded-circle img-fluid img-custom my-5" src="assets/images/20180210_175508v2.png" alt="Craig Wright">
+            </div>
+
+            <section class="container">
+                <div class="card">
+                    <h1 class="card-header text-center">About Me</h1>
+                    <p class="p-2 p-indent">My name is Craig, I'm hoping to get myself into a job field that is more 
+                        tech oriented than my current job. I usually like to go longboarding when the 
+                        weather is nice, or if that seems a bit too quick paced for me at the time I'll
+                        just go on a walk. I like gaming, and as of writing this, I am making my way through
+                        Dark Souls 3 after taking a bit of a break from Kingdom Hearts.
+                    </p>
+
+                    <p class="p-2 p-indent">My interest in web development began as I was taking a class through SLCC,
+                        Living in a Digital World, there was an assignment that had us build a 
+                        working wiki page about a mock event we were to set up. To style the page, 
+                        I went into the pages source and started changing things to suit the style of the 
+                        project. Since then it's been a fascination, and now I've decided to take steps towards
+                        becoming a web developer.
+                    </p>
                 </div>
             </section>
-        </header>
-
-        <div>
-            <img class="rounded-circle img-fluid img-custom my-5" src="assets/images/20180210_175508v2.png" alt="Craig Wright">
-        </div>
-
-        <section class="container">
-            <div class="card">
-                <h1 class="card-header text-center">About Me</h1>
-                <p class="p-2">My name is Craig, I'm hoping to get myself into a job field that is more 
-                    tech oriented than my current job. I usually like to go longboarding when the 
-                    weather is nice, or if that seems a bit too quick paced for me at the time I'll
-                    just go on a walk. I like gaming, and as of writing this, I am making my way through
-                    Dark Souls 3 after taking a bit of a break from Kingdom Hearts.
-                </p>
-
-                <p class="p-2">My interest in web development began as I was taking a class through SLCC,
-                    Living in a Digital World, there was an assignment that had us build a 
-                    working wiki page about a mock event we were to set up. To style the page, 
-                    I went into the pages source and started changing things to suit the style of the 
-                    project. Since then it's been a fascination, and now I've decided to take steps towards
-                    becoming a web developer.
-                </p>
-            </div>
-        </section>
-
+        
+        </div>        
     </div>
 
 
 
 
-    <footer class="footer">Placeholder</footer>
+    <footer class="footer text-center bg-info row no-gutters align-items-center">
+        <p class="col align-self-center">Placeholder</p>
+    </footer>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>

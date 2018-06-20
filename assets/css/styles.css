@@ -6,7 +6,7 @@ header{
     background: #c5c8cc;
 }
 
-p{
+.p-indent{
     text-indent: 50px;
 }
 
@@ -15,14 +15,21 @@ a{
     color: black;
 }
 
+.header{
+    min-height: 50px;
+}
+
 .header-elem{
-    max-height: 50px;
-    line-height: 50px;
+    min-height: 50px;
 }
 
 .header-elem-text{
     font-size: 1.5em;
 }
+
+/* .drop-btn{
+    width: 30%;
+} */
 
 #wrap{
     min-height: 100%;
@@ -41,20 +48,42 @@ a{
 
 .footer{
     position: relative;
-    margin-top: -150px;
-    height: 150px;
+    margin-top: -80px;
+    height: 80px;
     clear: both;
     padding-top: 20px;
-    /*comment/delete visibility if making actual footer*/
-    visibility: hidden;
 }
+/* 
+@media screen and (max-width: 716px){
+    .header-elem-text{
+        font-size: 1.25em;
+    }
+};
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 602px){
+    .header-elem-text{
+        font-size: 0.8em;
+    }
+} */
+
+@media screen and (max-width: 575px){
     .img-custom{
         display: block;
         margin-left: auto;
         margin-right: auto;
         max-width: 200px;
         max-height: 200px;
+    }
+
+    .header{
+        max-height: 100px;
+    }
+
+    /* .header-elem-text{
+        font-size: 4vw;
+    } */
+    
+    .header-elem-nav-btn{
+        text-align: center!important;
     }
 }
