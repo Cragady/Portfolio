@@ -49,6 +49,19 @@ a{
     margin-left: 50px;
 }
 
+.portimage{
+    margin: 20px auto 20px auto;
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+    opacity: 0.33;
+}
+
+.work{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .footer{
     position: relative;
     margin-top: -120px;
@@ -74,6 +87,15 @@ a{
         font-size: 0.8em;
     }
 } */
+
+/* div#my-ports > a > h3:hover{
+    color: #fff;
+    background-color: black;
+} */
+
+a:hover{
+    color: rgb(121, 121, 121);
+}
 
 @media screen and (max-width: 768px){
     .header-elem{
