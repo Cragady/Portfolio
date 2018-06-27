@@ -66,10 +66,14 @@ a{
     background: rgb(187, 202, 221);
 }
 
+.my-email{
+    color: rgb(243, 93, 93);
+}
+
 .footer{
     position: relative;
-    margin-top: -120px;
-    height: 120px;
+    margin-top: -150px;
+    height: 150px;
     clear: both;
     padding-top: 20px;
     background: #c5c8cc;
