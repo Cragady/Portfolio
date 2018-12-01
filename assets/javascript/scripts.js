@@ -67,12 +67,54 @@ aLinker = function(){
     });
 };
 
+picRando = function(pathing, rando){
+    return pathing + rando[Math.floor(Math.random() * rando.length)];
+};
+
+fadeGround = function(fRun, fBack, runner, finisher, cb, middle){
+    if(fRun){
+        runner += 10;
+    } else if (fBack){
+        runner -= 10;
+    }
+    if(runner === finisher && middle !== undefined){
+        $('.diffground2').css('background', `rgba(0, 0, 0, 1)`);
+        middle();
+        cb(false, true, 1000, 660, cb);
+        return;
+    } else if(runner === finisher && middle === undefined){
+        $('.diffground2').css('background', `rgba(0, 0, 0, 0.660)`);
+        return;
+    };
+    if(runner % 10 === 0){
+        $('.diffground2').css('background', `rgba(0, 0, 0, 0.${runner})`);
+    };
+    setTimeout(function(){cb(fRun, fBack, runner, finisher, cb, middle)}, 25);
+};
+
 diffground = function(){
     const picArr = ['bamazon.PNG', 'Book-MarkY!.PNG', 'burgers.png', 'Burgers2.PNG', 'chef-in-your-pantry.PNG', 'clicky.PNG', 'friend-finder.PNG', 'friend-finder2.PNG', 'giphy-gifs.PNG', 'hangman-game.PNG', 'intronerd.PNG', 'liriJS.PNG', 'nyt-scrubber.PNG', 'RPG-game.PNG', 'RPS-game.PNG', 'trivia-game.PNG', 'web-scraper.PNG', 'word-guess-pic.PNG'];
     const prePath = 'assets/images/'
-    const piPath = prePath + picArr[Math.floor(Math.random() * picArr.length)];
+    const piPath = picRando(prePath, picArr);
+    let scrollCount = 0;
     $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
-    'background-size': '100% 100vh'})
+    'background-size': '100% 100vh'});
+    $(window).scroll(function(){
+        const piPath = picRando(prePath, picArr);
+        scrollCount++;
+        if(scrollCount > 150){
+            fadeGround(true, false, 660, 1000, fadeGround,
+                function(){
+                    $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
+                    'background-size': '100% 100vh'});
+                }
+            );
+            // $('.diffground2').animate({
+            //     background: 'rgba(0, 0, 0, 0.658)'
+            // }, 1000);
+            scrollCount = 0;
+        };
+    });
 };
 
 $(document).ready(function(){
