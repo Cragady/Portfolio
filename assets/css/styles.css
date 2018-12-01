@@ -2,8 +2,12 @@ html, body{
     height: 100%;
 }
 
+body{
+    background: #333;
+}
+
 header{
-    background: #c5c8cc;
+    background: #6c6e70;
 }
 
 .p-indent{
@@ -27,6 +31,7 @@ a{
 }
 
 .header-elem-text{
+    color: rgb(255, 255, 255);
     font-size: 1.5em;
 }
 
@@ -41,6 +46,23 @@ a{
 #main{
     overflow: auto;
     padding-bottom: 150px;
+}
+
+.diffground2{
+    background: rgba(0, 0, 0, 0.658);
+}
+
+.card-cust{
+    background: rgba(122, 119, 119, 0.842);
+    color: rgb(255, 255, 255);
+}
+
+.card-cust2{
+    background: rgba(146, 143, 150, 0.952);
+}
+
+.card-cust2:hover{
+    color: rgb(17, 17, 17);
 }
 
 .img-custom{
@@ -71,12 +93,13 @@ a{
 }
 
 .footer{
+    color: rgb(255, 255, 255);
     position: relative;
     margin-top: -150px;
     height: 150px;
     clear: both;
     padding-top: 20px;
-    background: #c5c8cc;
+    background: #6c6e70;
 }
 
 .aref-img{
@@ -101,8 +124,28 @@ a{
     background-color: black;
 } */
 
+.a-border{
+    border: 2px solid rgb(236, 230, 230);
+    border-radius: 10%;
+    padding: 4px;
+}
+
 a:hover{
     color: rgb(121, 121, 121);
+}
+
+.a-diff{
+    color: rgb(255, 255, 255);
+}
+
+.a-diff:hover{
+    color: rgb(230, 218, 208);
+}
+
+.text-diff{
+    color: rgb(182, 255, 206);
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 768px){
