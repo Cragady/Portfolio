@@ -86,7 +86,8 @@ function diffground(){
     const prePath = 'assets/images/'
     const piPath = picRando(prePath, picArr);
     let scrollCount = 0;
-    $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
+    $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`,
+        'background-attachment': 'fixed', 
         '-webkit-background-size': '100% 100vh',
         '-moz-background-size': '100% 100vh',
         '-o-background-size': '100% 100vh',
@@ -102,6 +103,7 @@ function diffground(){
             fadeGround(true, false, 660, 1000, fadeGround,
                 function(){
                     $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
+                        'background-attachment': 'fixed',
                         '-webkit-background-size': '100% 100vh',
                         '-moz-background-size': '100% 100vh',
                         '-o-background-size': '100% 100vh',
