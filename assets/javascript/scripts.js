@@ -98,15 +98,27 @@ function diffground(){
     const piPath = picRando(prePath, picArr);
     let scrollCount = 0;
     $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
-    'background-size': '100% 100vh'});
+        '-webkit-background-size': '100% 100vh',
+        '-moz-background-size': '100% 100vh',
+        '-o-background-size': '100% 100vh',
+        'background-size': '100% 100vh',
+        'height': '100%',
+        'overflow': 'hidden'
+    });
     $(window).scroll(function(){
         const piPath = picRando(prePath, picArr);
         scrollCount++;
         if(scrollCount > 150){
             fadeGround(true, false, 660, 1000, fadeGround,
                 function(){
-                    $('.diffground').css({'background': `url("${piPath}") fixed`, 
-                    'background-size': '100% 100vh'});
+                    $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
+                        '-webkit-background-size': '100% 100vh',
+                        '-moz-background-size': '100% 100vh',
+                        '-o-background-size': '100% 100vh',
+                        'background-size': '100% 100vh',
+                        'height': '100%',
+                        'overflow': 'hidden'
+                    });
                 }
             );
             scrollCount = 0;
