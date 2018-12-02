@@ -21,8 +21,9 @@ function opacityMouse(){
 
         },
 
-        taphold: function(){
+        ontouchstart: function(){
             const selector = $(this).attr('data-unfaded');
+            console.log('hi');
             if(selector === 'yes'){
 
                 return;
@@ -103,7 +104,8 @@ function diffground(){
         '-o-background-size': '100% 100vh',
         'background-size': '100% 100vh',
         'height': '100%',
-        'overflow': 'hidden'
+        'overflow': 'hidden',
+        '-webkit-backface-visibility': 'hidden'
     });
     $(window).scroll(function(){
         const piPath = picRando(prePath, picArr);
@@ -117,7 +119,8 @@ function diffground(){
                         '-o-background-size': '100% 100vh',
                         'background-size': '100% 100vh',
                         'height': '100%',
-                        'overflow': 'hidden'
+                        'overflow': 'hidden',
+                        '-webkit-backface-visibility': 'hidden'
                     });
                 }
             );
