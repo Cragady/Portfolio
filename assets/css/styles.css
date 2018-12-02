@@ -48,6 +48,10 @@ a{
     padding-bottom: 150px;
 }
 
+.diffground{
+    position: fixed;
+}
+
 .diffground2{
     background: rgba(0, 0, 0, 0.660);
 }
