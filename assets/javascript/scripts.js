@@ -1,9 +1,7 @@
-opacityMouse = function(){
+function opacityMouse(){
     let mousePass;
     $('body').on({
-        
-        
-        
+               
         mouseenter: function(){
             const selector = $(this).attr('data-unfaded');
             if(selector === 'yes' && mousePass === 'no'){
@@ -48,17 +46,16 @@ opacityMouse = function(){
             };
         }
 
-
     }, 'a');
 };
 
-dataResetter = function(){
+function dataResetter(){
     const myPorts = $('#my-ports').find('a');
     myPorts.attr('data-unfaded', 'no');
     setInterval(function(){$(myPorts.attr('data-unfaded', 'no'));}, 1500);
 }
 
-aLinker = function(){
+function aLinker(){
     const pathing = window.location.pathname.split('/');
     $.each($('a'), function(i, val){
         if(val.attributes.href.nodeValue === pathing[pathing.length - 1]){
@@ -67,11 +64,11 @@ aLinker = function(){
     });
 };
 
-picRando = function(pathing, rando){
+function picRando(pathing, rando){
     return pathing + rando[Math.floor(Math.random() * rando.length)];
 };
 
-fadeGround = function(fRun, fBack, runner, finisher, cb, middle){
+function fadeGround(fRun, fBack, runner, finisher, cb, middle){
     if(fRun){
         runner += 10;
     } else if (fBack){
@@ -90,7 +87,7 @@ fadeGround = function(fRun, fBack, runner, finisher, cb, middle){
     setTimeout(function(){cb(fRun, fBack, runner, finisher, cb, middle)}, 25);
 };
 
-diffground = function(){
+function diffground(){
     const picArr = ['bamazon.PNG', 'Book-MarkY!.PNG', 'burgers.png', 
         'Burgers2.PNG', 'chef-in-your-pantry.PNG', 'clicky.PNG', 
         'friend-finder.PNG', 'friend-finder2.PNG', 'giphy-gifs.PNG', 
@@ -108,7 +105,7 @@ diffground = function(){
         if(scrollCount > 150){
             fadeGround(true, false, 660, 1000, fadeGround,
                 function(){
-                    $('.diffground').css({'background': `url("${piPath}") no-repeat fixed`, 
+                    $('.diffground').css({'background': `url("${piPath}") fixed`, 
                     'background-size': '100% 100vh'});
                 }
             );
