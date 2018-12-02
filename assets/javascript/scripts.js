@@ -91,7 +91,12 @@ fadeGround = function(fRun, fBack, runner, finisher, cb, middle){
 };
 
 diffground = function(){
-    const picArr = ['bamazon.PNG', 'Book-MarkY!.PNG', 'burgers.png', 'Burgers2.PNG', 'chef-in-your-pantry.PNG', 'clicky.PNG', 'friend-finder.PNG', 'friend-finder2.PNG', 'giphy-gifs.PNG', 'hangman-game.PNG', 'intronerd.PNG', 'liriJS.PNG', 'nyt-scrubber.PNG', 'RPG-game.PNG', 'RPS-game.PNG', 'trivia-game.PNG', 'web-scraper.PNG', 'word-guess-pic.PNG'];
+    const picArr = ['bamazon.PNG', 'Book-MarkY!.PNG', 'burgers.png', 
+        'Burgers2.PNG', 'chef-in-your-pantry.PNG', 'clicky.PNG', 
+        'friend-finder.PNG', 'friend-finder2.PNG', 'giphy-gifs.PNG', 
+        'hangman-game.PNG', 'intronerd.PNG', 'liriJS.PNG', 'nyt-scrubber.PNG', 
+        'RPG-game.PNG', 'RPS-game.PNG', 'trivia-game.PNG', 'web-scraper.PNG', 
+    'word-guess-pic.PNG'];
     const prePath = 'assets/images/'
     const piPath = picRando(prePath, picArr);
     let scrollCount = 0;
