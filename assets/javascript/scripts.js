@@ -57,8 +57,12 @@ function aLinker(){
     });
 };
 
-function picRando(pathing, rando){
-    return pathing + rando[Math.floor(Math.random() * rando.length)];
+function picRando(pathing, rando, inheriter, cb){
+    let esperPic = pathing + rando[Math.floor(Math.random() * rando.length)];
+    if(inheriter === esperPic){
+        return cb(pathing, rando, inheriter, cb);
+    };
+    return esperPic;
 };
 
 function fadeGround(fRun, fBack, runner, finisher, cb, middle){
@@ -89,6 +93,7 @@ function diffground(){
     'word-guess-pic.PNG'];
     const prePath = 'assets/images/'
     const piPath = picRando(prePath, picArr);
+    let passPi = piPath;
     let scrollCount = 0;
     $('.diffground').css({'background': `url("${piPath}") no-repeat`,
         'position': 'fixed', 
@@ -99,9 +104,10 @@ function diffground(){
         'z-index': '-1'
     });
     $(window).scroll(function(){
-        const piPath = picRando(prePath, picArr);
         scrollCount++;
         if(scrollCount > 150){
+            const piPath = picRando(prePath, picArr, passPi, picRando);
+            passPi = piPath;
             fadeGround(true, false, 660, 1000, fadeGround,
                 function(){
                     $('.diffground').css({'background': `url("${piPath}") no-repeat`,
