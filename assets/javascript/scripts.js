@@ -109,9 +109,6 @@ function diffground(){
                     'background-size': '100% 100vh'});
                 }
             );
-            // $('.diffground2').animate({
-            //     background: 'rgba(0, 0, 0, 0.658)'
-            // }, 1000);
             scrollCount = 0;
         };
     });
