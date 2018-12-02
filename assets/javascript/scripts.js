@@ -21,18 +21,6 @@ function opacityMouse(){
 
         },
 
-        ontouchstart: function(){
-            const selector = $(this).attr('data-unfaded');
-            console.log('hi');
-            if(selector === 'yes'){
-
-                return;
-            } else {
-                $(this).find('.portimage').fadeTo(250, 1);
-                $(this).attr('data-unfaded', 'yes');
-            }; 
-        },
-
         mouseleave: function(){
             if(mousePass === 'yes'){
                 if($(this).find('.portimage').css('opacity') > '0.33'){
@@ -129,7 +117,26 @@ function diffground(){
     });
 };
 
+function touchNovice(){
+    if($('a').find('.portimage').css('opacity') < '1'){
+        $('a').find('.portimage').fadeTo(250, 1);
+    };
+};
+
+function touchExpert(){
+    if($('a').find('.portimage').css('opacity') > 0.33){
+        $('a').find('.portimage').fadeTo(250, 0.33);
+    };
+};
+
+function touchyTouchy(){
+    window.addEventListener('touchstart', touchNovice);
+    window.addEventListener('touchend', touchExpert);
+};
+
+
 $(document).ready(function(){
+    touchyTouchy();
     diffground();
     aLinker();
     dataResetter();
