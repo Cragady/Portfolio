@@ -86,15 +86,13 @@ function diffground(){
     const prePath = 'assets/images/'
     const piPath = picRando(prePath, picArr);
     let scrollCount = 0;
-    $('.diffground').css({'background': `url("${piPath}") no-repeat center center fixed`,
-        // 'background-attachment': 'fixed', 
-        '-webkit-background-size': 'cover',
-        '-moz-background-size': 'cover',
-        '-o-background-size': 'cover',
-        'background-size': 'cover',
+    $('.diffground').css({'background': `url("${piPath}") no-repeat`,
+        'position': 'fixed', 
+        'background-size': '100% 100vh',
         'height': '100%',
-        'overflow': 'hidden',
-        '-webkit-backface-visibility': 'hidden'
+        'min-height': '100%',
+        'width': '100%',
+        'z-index': '-1'
     });
     $(window).scroll(function(){
         const piPath = picRando(prePath, picArr);
@@ -102,15 +100,13 @@ function diffground(){
         if(scrollCount > 150){
             fadeGround(true, false, 660, 1000, fadeGround,
                 function(){
-                    $('.diffground').css({'background': `url("${piPath}") no-repeat center center fixed`, 
-                        // 'background-attachment': 'fixed',
-                        '-webkit-background-size': 'cover',
-                        '-moz-background-size': 'cover',
-                        '-o-background-size': 'cover',
-                        'background-size': 'cover',
+                    $('.diffground').css({'background': `url("${piPath}") no-repeat`,
+                        'position': 'fixed', 
+                        'background-size': '100% 100vh',
                         'height': '100%',
-                        'overflow': 'hidden',
-                        '-webkit-backface-visibility': 'hidden'
+                        'min-height': '100%',
+                        'width': '100%',
+                        'z-index': '-1'
                     });
                 }
             );
