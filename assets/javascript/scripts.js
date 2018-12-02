@@ -86,9 +86,7 @@ fadeGround = function(fRun, fBack, runner, finisher, cb, middle){
         $('.diffground2').css('background', `rgba(0, 0, 0, 0.660)`);
         return;
     };
-    if(runner % 10 === 0){
-        $('.diffground2').css('background', `rgba(0, 0, 0, 0.${runner})`);
-    };
+    $('.diffground2').css('background', `rgba(0, 0, 0, 0.${runner})`);
     setTimeout(function(){cb(fRun, fBack, runner, finisher, cb, middle)}, 25);
 };
 
