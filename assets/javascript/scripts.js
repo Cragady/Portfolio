@@ -49,6 +49,10 @@ function aLinker(){
     $.each($('a'), function(i, val){
         if(val.attributes.href.nodeValue === pathing[pathing.length - 1]){
             $(val).addClass('a-border');
+            return;
+        } else if (pathing[pathing.length -1 ] === "" && val.attributes.href.nodeValue === "index.html"){
+            $(val).addClass('a-border');
+            return;
         };
     });
 };
