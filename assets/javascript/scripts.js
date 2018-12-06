@@ -87,7 +87,7 @@ function fadeGround(fRun, fBack, runner, finisher, cb, middle){
 function diffground(){
     const picArr = ['bamazon.PNG', 'Book-MarkY!.PNG', 'burgers.png', 
         'Burgers2.PNG', 'chef-in-your-pantry.PNG', 'clicky.PNG', 
-        'friend-finder.PNG', 'friend-finder2.PNG', 'giphy-gifs.PNG', 
+        'friend-finder.PNG', 'friend-finder2.PNG', 
         'hangman-game.PNG', 'intronerd.PNG', 'liriJS.PNG', 'nyt-scrubber.PNG', 
         'RPG-game.PNG', 'RPS-game.PNG', 'trivia-game.PNG', 'web-scraper.PNG', 
     'word-guess-pic.PNG'];
